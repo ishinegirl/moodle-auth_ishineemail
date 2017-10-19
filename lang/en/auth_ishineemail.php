@@ -34,3 +34,5 @@ $string['prefecture']='Prefecture';
 $string['missingpostcode']='Postcode is a required field';
 $string['missingphone']='Phone number is a required field';
 $string['nofunnysymbols']='Numbers only. No hyphens or brackets.';
+$string['cantresend']='After you submit the form a confirmation mail will be sent to you. It cannot be resent. Unconfirmed accounts are deleted after 1 hour. If you are unable to confirm your account, please try again after that time.';
+$string['havingtrouble']='Having trouble?';

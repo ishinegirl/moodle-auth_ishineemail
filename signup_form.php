@@ -70,7 +70,7 @@ class ishineemail_login_signup_form extends moodleform implements renderable, te
             if (!get_string_manager()->string_exists($stringid, 'moodle')) {
                 $stringid = 'required';
             }
-            $mform->addRule($field, get_string($missingcity), 'required', null, 'client');
+            $mform->addRule($field, get_string('missingcity'), 'required', null, 'client');
         }
         
         //都道府県
@@ -120,9 +120,12 @@ class ishineemail_login_signup_form extends moodleform implements renderable, te
             $mform->addElement('checkbox', 'policyagreed', get_string('policyaccept'));
             $mform->addRule('policyagreed', get_string('policyagree'), 'required', null, 'client');
         }
-
         // buttons
         $this->add_action_buttons(true, get_string('createaccount'));
+        
+        $mform->addElement('header', 'havingtrouble', get_string('havingtrouble','auth_ishineemail'), '');
+		//warning message about email resent
+		$mform->addElement('static', 'cantresend', '', get_string('cantresend','auth_ishineemail'));
 
     }
 

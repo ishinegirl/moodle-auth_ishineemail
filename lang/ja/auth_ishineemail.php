@@ -28,9 +28,10 @@ $string['auth_ishineemailrecaptcha'] = 'Adds a visual/audio confirmation form el
 $string['auth_ishineemailrecaptcha_key'] = 'Enable reCAPTCHA element';
 $string['auth_ishineemailsettings'] = 'Settings';
 $string['pluginname'] = 'iShine Email-based self-registration';
-
 $string['postcode']='郵便番号';
 $string['prefecture']='都道府県';
 $string['missingpostcode']='「郵便番号」は必須項目';
 $string['missingphone']='「電話」は必須項目';
 $string['nofunnysymbols']='ハイフンなしで入力して下さい。';
+$string['cantresend']='登録情報を送信後、「新規アカウント登録完了」のメールが登録されたメールアドレスに自動送信されます。メールが届かない、メールを紛失したなど、１時間以内に新規アカウント登録を完了されない場合、登録は自動的にキャンセルされます。その場合は、改めてご登録いただきますよう、お願いいたします。';
+$string['havingtrouble']='お困りの方へ';
