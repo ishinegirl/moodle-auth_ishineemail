@@ -216,4 +216,17 @@ class ishineemail_login_signup_form extends moodleform implements renderable, te
         return !empty($CFG->recaptchapublickey) && !empty($CFG->recaptchaprivatekey) && $authplugin->is_captcha_enabled();
     }
 
-}
+/*
+* Export the data so it can be used as content in a mustache template
+*
+*/
+public function export_for_template(renderer_base $output){
+    ob_start();
+    $this->display();
+    $formhtml = ob_get_contents();
+    ob_end_clean();
+    $context = ['formhtml'=>$formhtml];
+    return $context;
+}//end of function
+
+}//end of class
