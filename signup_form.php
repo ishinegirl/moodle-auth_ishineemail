@@ -30,7 +30,7 @@ require_once($CFG->libdir.'/formslib.php');
 require_once($CFG->dirroot.'/user/profile/lib.php');
 require_once($CFG->dirroot . '/user/editlib.php');
 
-class ishineemail_login_signup_form extends moodleform {
+class ishineemail_login_signup_form extends moodleform implements renderable, templatable{
     function definition() {
         global $USER, $CFG;
 
