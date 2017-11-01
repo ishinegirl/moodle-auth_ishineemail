@@ -28,9 +28,9 @@ $string['auth_ishineemailrecaptcha'] = 'Adds a visual/audio confirmation form el
 $string['auth_ishineemailrecaptcha_key'] = 'Enable reCAPTCHA element';
 $string['auth_ishineemailsettings'] = 'Settings';
 $string['pluginname'] = 'iShine Email-based self-registration';
-
 $string['postcode']='Postcode';
 $string['prefecture']='Prefecture';
+$string['missingcity']='Prefecture is a required field';
 $string['missingpostcode']='Postcode is a required field';
 $string['missingphone']='Phone number is a required field';
 $string['nofunnysymbols']='Numbers only. No hyphens or brackets.';

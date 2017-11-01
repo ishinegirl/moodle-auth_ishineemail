@@ -70,13 +70,13 @@ class ishineemail_login_signup_form extends moodleform implements renderable, te
             if (!get_string_manager()->string_exists($stringid, 'moodle')) {
                 $stringid = 'required';
             }
-            $mform->addRule($field, get_string('missingcity'), 'required', null, 'client');
+            $mform->addRule($field, get_string($stringid), 'required', null, 'client');
         }
         
         //都道府県
         $prefs = \auth_ishineemail\helper::fetch_prefecture_list();
         $mform->addElement('select', 'city', get_string('prefecture','auth_ishineemail'), $prefs,'');
-		$mform->addRule('city', get_string($stringid), 'required', null, 'client');
+		$mform->addRule('city', get_string('missingcity','auth_ishineemail'), 'required', null, 'client');
         
          //Postcode
         $mform->addElement('text', 'address', get_string('postcode','auth_ishineemail'), 'maxlength="10" size="20"');

@@ -30,6 +30,7 @@ $string['auth_ishineemailsettings'] = 'Settings';
 $string['pluginname'] = 'iShine Email-based self-registration';
 $string['postcode']='郵便番号';
 $string['prefecture']='都道府県';
+$string['missingcity']='「都道府県」は必須項目';
 $string['missingpostcode']='「郵便番号」は必須項目';
 $string['missingphone']='「電話」は必須項目';
 $string['nofunnysymbols']='ハイフンなしで入力して下さい。';
