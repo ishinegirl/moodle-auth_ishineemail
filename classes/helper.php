@@ -39,7 +39,8 @@ class helper
      * @param moodleform $mform moodle form object
      */
     public static function fetch_prefecture_list() {
-        $prefs = array('北海道',
+        $prefs= array();
+        $keys = array('北海道',
 '青森県',
 '岩手県',
 '宮城県',
@@ -86,7 +87,9 @@ class helper
 '宮崎県',
 '鹿児島県',
 '沖縄県');
-
+foreach($keys as $key){
+    $prefs[$key]=$key;
+}
 return $prefs;
     }
 
