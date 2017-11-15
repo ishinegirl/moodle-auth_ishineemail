@@ -42,8 +42,8 @@ class ishineemail_login_signup_form extends moodleform implements renderable, te
         $mform->addElement('text', 'username', get_string('username'), 'maxlength="100" size="12"');
         $mform->setType('username', PARAM_RAW);
         $mform->addRule('username', get_string('missingusername'), 'required', null, 'client');
+        $mform->addElement('static', 'usernamepolicyinfo', '', get_string('invalidusername'));
 
-        
         $mform->addElement('passwordunmask', 'password', get_string('password'), 'maxlength="32" size="12"');
         $mform->setType('password', core_user::get_property_type('password'));
         $mform->addRule('password', get_string('missingpassword'), 'required', null, 'client');
@@ -122,10 +122,10 @@ class ishineemail_login_signup_form extends moodleform implements renderable, te
         }
         // buttons
         $this->add_action_buttons(true, get_string('createaccount'));
-        
-        $mform->addElement('header', 'havingtrouble', get_string('havingtrouble','auth_ishineemail'), '');
-		//warning message about email resent
-		$mform->addElement('static', 'cantresend', '', get_string('cantresend','auth_ishineemail'));
+
+        //warning message about email resent
+		//$mform->addElement('static', 'cantresend', '<span class="auth_ishineemail_havingtroubleheader">' . get_string('havingtrouble','auth_ishineemail') . '<span>', get_string('cantresend','auth_ishineemail'));
+        $mform->addElement('static', 'cantresend', '' , get_string('cantresend','auth_ishineemail'));
 
     }
 
