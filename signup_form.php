@@ -103,9 +103,13 @@ class ishineemail_login_signup_form extends moodleform implements renderable, te
             $mform->setDefault('country', '');
         }
 */
+        //all our users are Japanese
         $mform->addElement('hidden', 'country', 'JP');
         $mform->setType('country', PARAM_TEXT);
-        
+        //we use the URL field to pass to CRM to distinguish between self-enroled users
+        //and other users
+        $mform->addElement('hidden', 'url', 'ispc-x.jp');
+        $mform->setType('url', PARAM_TEXT);
         
         if ($this->signup_captcha_enabled()) {
             $mform->addElement('recaptcha', 'recaptcha_element', get_string('security_question', 'auth'), array('https' => $CFG->loginhttps));
